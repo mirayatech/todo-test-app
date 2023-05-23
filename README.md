@@ -13,3 +13,7 @@ This is my first project ever built with React Native. It's kind of like a todo 
 - Understanding Xcode and Android Studio
 
 And much more!
+
+
+### 🎥 Preview
+![ezgif-3-03d6cc78f2](https://github.com/mirayatech/test-native-app/assets/71933266/3efa97ec-3ceb-4516-9ee6-17ac8405d776)
