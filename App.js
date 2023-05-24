@@ -24,6 +24,12 @@ export default function App() {
     setEnteredGoalText("");
   }
 
+  function removeGoalHandler(goalKey) {
+    setCourseGoals((currentCourseGoals) =>
+      currentCourseGoals.filter((goal) => goal.key !== goalKey)
+    );
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
@@ -41,7 +47,12 @@ export default function App() {
           style={styles.scrollView}
           renderItem={({ item }) => (
             <View style={styles.goalItem}>
-              <Text style={styles.goalText}>{item.text}</Text>
+              <Text
+                style={styles.goalText}
+                onPress={() => removeGoalHandler(item.key)}
+              >
+                {item.text}
+              </Text>
             </View>
           )}
         />
@@ -58,6 +69,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   inputContainer: {
+    marginHorizontal: 20,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
